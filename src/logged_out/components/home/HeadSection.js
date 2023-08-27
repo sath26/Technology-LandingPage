@@ -35,6 +35,8 @@ const styles = (theme) => ({
       paddingTop: theme.spacing(1),
       paddingBottom: theme.spacing(1),
       paddingRight: theme.spacing(1),
+      marginRight: theme.spacing(2),
+
     },
     [theme.breakpoints.up("lg")]: {
       paddingTop: theme.spacing(2),

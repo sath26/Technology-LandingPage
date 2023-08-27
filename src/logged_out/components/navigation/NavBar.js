@@ -43,6 +43,9 @@ const styles = theme => ({
   },
   noDecoration: {
     textDecoration: "none !important"
+  },
+  colorPrimary: {
+    color: "#EF7F5A",
   }
 });
 
@@ -102,10 +105,11 @@ function NavBar(props) {
             <Hidden mdUp>
               <IconButton
                 className={classes.menuButton}
+
                 onClick={handleMobileDrawerOpen}
                 aria-label="Open Navigation"
               >
-                <MenuIcon color="primary" />
+                <MenuIcon className={classes.colorPrimary} />
               </IconButton>
             </Hidden>
             <Hidden smDown>
