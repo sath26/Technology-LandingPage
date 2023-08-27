@@ -22,13 +22,20 @@ const styles = theme => ({
     boxShadow: theme.shadows[6],
     backgroundColor: theme.palette.common.white
   },
+  image: {
+    maxWidth: "100%",
+    verticalAlign: "middle",
+    borderRadius: theme.shape.borderRadius,
+    // boxShadow: theme.shadows[4],
+  },
   toolbar: {
     display: "flex",
     justifyContent: "space-between"
   },
   menuButtonText: {
     fontSize: theme.typography.body1.fontSize,
-    fontWeight: theme.typography.h6.fontWeight
+    fontWeight: theme.typography.h6.fontWeight,
+    color: "#EF7F5A",
   },
   brandText: {
     fontFamily: "'Teko', cursive",
@@ -71,20 +78,25 @@ function NavBar(props) {
       icon: <LockOpenIcon className="text-white" />
     }
   ];
-  
+
   return (
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <div>
-            <Typography
+            {/* <Typography
               variant="h4"
               className={classes.brandText}
               display="inline"
               color="secondary"
             >
               LandingPage Template
-            </Typography>
+            </Typography> */}
+            <img
+              src={`${process.env.PUBLIC_URL}/images/main_logo.svg`}
+              className={classes.image}
+              alt="logo image"
+            />
           </div>
           <div>
             <Hidden mdUp>
