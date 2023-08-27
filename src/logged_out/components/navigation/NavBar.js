@@ -149,6 +149,7 @@ function NavBar(props) {
         </Toolbar>
       </AppBar>
       <NavigationDrawer
+        // className={classes.colorPrimary}
         menuItems={menuItems}
         anchor="right"
         open={mobileDrawerOpen}

@@ -32,9 +32,9 @@ const styles = (theme) => ({
     paddingTop: theme.spacing(1.5),
     paddingBottom: theme.spacing(1.5),
     [theme.breakpoints.up("xs")]: {
-      paddingTop: theme.spacing(1),
-      paddingBottom: theme.spacing(1),
-      paddingRight: theme.spacing(1),
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(2),
+      paddingRight: theme.spacing(2),
       marginRight: theme.spacing(2),
 
     },
@@ -53,13 +53,18 @@ const styles = (theme) => ({
     // fontSize: theme.typography.body1.fontSize,
     // fontWeight: theme.typography.h6.fontWeight,
     fontSize: theme.typography.body1.fontSize,
+    paddingRight: theme.spacing(1),
+    paddingLeft: theme.spacing(4),
     [theme.breakpoints.up("sm")]: {
-      fontSize: theme.typography.h6.fontSize,
+      fontSize: theme.typography.h5.fontSize,
+      paddingRight: theme.spacing(1),
+      paddingLeft: theme.spacing(4),
     },
 
     backgroundColor: "#EF7F5A",
     '&:hover': {
-      backgroundColor: "#EF7F5A"
+      backgroundColor: "#EF7F5A",
+
     }
   },
 
@@ -173,7 +178,7 @@ function HeadSection(props) {
 
                         <Button
                           variant="outlined"
-                          color="secondary"
+                          // color="secondary"
                           // fullWidth
                           className={classes.extraLargeButton}
                           classes={{ label: classes.extraLargeButtonLabel }}
@@ -184,7 +189,7 @@ function HeadSection(props) {
                         <Button
 
                           variant=" contained "
-                          color="secondary"
+                          // color="secondary"
                           classes={{ label: classes.extraLargeButton }}
                           className={classes.menuButtonText}>See More</Button>
 

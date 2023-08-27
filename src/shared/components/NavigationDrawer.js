@@ -29,6 +29,9 @@ const styles = theme => ({
   },
   noDecoration: {
     textDecoration: "none !important"
+  },
+  colorPrimary: {
+    color: "#EF7F5A"
   }
 });
 
@@ -66,7 +69,7 @@ function NavigationDrawer(props) {
         >
           <ListItemIcon className={classes.closeIcon}>
             <IconButton onClick={onClose} aria-label="Close Navigation">
-              <CloseIcon color="primary" />
+              <CloseIcon className={classes.colorPrimary} />
             </IconButton>
           </ListItemIcon>
         </ListItem>
