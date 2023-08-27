@@ -12,7 +12,10 @@ import {
   withStyles,
   withWidth,
   isWidthUp,
+  withTheme,
+
 } from "@material-ui/core";
+// import { purple } from '@mui/material/colors';
 import WaveBorder from "../../../shared/components/WaveBorder";
 import ZoomImage from "../../../shared/components/ZoomImage";
 
@@ -24,16 +27,35 @@ const styles = (theme) => ({
     },
   },
   extraLargeButton: {
+    // border:,
+    borderRadius: 50,
     paddingTop: theme.spacing(1.5),
     paddingBottom: theme.spacing(1.5),
     [theme.breakpoints.up("xs")]: {
       paddingTop: theme.spacing(1),
       paddingBottom: theme.spacing(1),
+      paddingRight: theme.spacing(1),
     },
     [theme.breakpoints.up("lg")]: {
       paddingTop: theme.spacing(2),
       paddingBottom: theme.spacing(2),
+      paddingRight: theme.spacing(5),
+      paddingLeft: theme.spacing(5),
+      marginRight: theme.spacing(2),
+      // marginLeft: theme.spacing(2)
     },
+  },
+  menuButtonText: {
+    borderRadius: 50,
+    color: "#fff",
+    // fontSize: theme.typography.body1.fontSize,
+    // fontWeight: theme.typography.h6.fontWeight,
+    fontSize: theme.typography.body1.fontSize,
+    [theme.breakpoints.up("sm")]: {
+      fontSize: theme.typography.h6.fontSize,
+    },
+
+    backgroundColor: "#EF7F5A",
   },
   card: {
     boxShadow: theme.shadows[4],
@@ -56,8 +78,8 @@ const styles = (theme) => ({
       paddingRight: theme.spacing(5),
     },
     [theme.breakpoints.up("lg")]: {
-      paddingTop: theme.spacing(6),
-      paddingBottom: theme.spacing(6),
+      paddingTop: theme.spacing(4),
+      paddingBottom: theme.spacing(4),
       paddingLeft: theme.spacing(6),
       paddingRight: theme.spacing(6),
     },
@@ -105,10 +127,10 @@ function HeadSection(props) {
     <Fragment>
       <div className={classNames("lg-p-top", classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container)}>
-          <ParticlesBg
+          {/* <ParticlesBg
             type={theme.particle}
             bg={{ width: "100%", height: "100%", position: "absolute", zIndex: "0", top: 0, left: 0 }}
-          />
+          /> */}
 
           <Box display="flex" justifyContent="center" className="row">
             <Card
@@ -130,30 +152,36 @@ function HeadSection(props) {
                         <Typography
                           variant={isWidthUp("lg", width) ? "h3" : "h4"}
                         >
-                          Free Template for building a WebPage using
-                          Material-UI
+                          NEW HORIZON
                         </Typography>
                       </Box>
-                      <div>
-                        <Box mb={2}>
-                          <Typography
-                            variant={isWidthUp("lg", width) ? "h6" : "body1"}
-                            color="textSecondary"
-                          >
-                            Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt
-                          </Typography>
-                        </Box>
+                      <Box mb={2}>
+                        <Typography
+                          variant={isWidthUp("lg", width) ? "h6" : "body1"}
+                          color="textSecondary"
+                        >
+                          WHERE WE HELP YOU SHAPE YOUR IDEAS INTO REALITY
+                        </Typography>
+                      </Box>
+                      <div class="">
+
                         <Button
-                          variant="contained"
+                          variant="outlined"
                           color="secondary"
-                          fullWidth
+                          // fullWidth
                           className={classes.extraLargeButton}
                           classes={{ label: classes.extraLargeButtonLabel }}
-                          href="https://github.com/wonderfullandingpage/Technology-LandingPage"
+                        // href="https://github.com/wonderfullandingpage/Technology-LandingPage"
                         >
-                          Download from GitHub
+                          Contact Us
                         </Button>
+                        <Button
+
+                          variant=" contained "
+                          color="secondary"
+                          classes={{ label: classes.extraLargeButton }}
+                          className={classes.menuButtonText}>See More</Button>
+
                       </div>
                     </Box>
                   </Grid>
@@ -172,7 +200,7 @@ function HeadSection(props) {
           </Box>
         </div>
       </div>
-  
+
     </Fragment>
   );
 }
