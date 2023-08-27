@@ -56,7 +56,11 @@ const styles = (theme) => ({
     },
 
     backgroundColor: "#EF7F5A",
+    '&:hover': {
+      backgroundColor: "#EF7F5A"
+    }
   },
+
   card: {
     boxShadow: theme.shadows[4],
     marginLeft: theme.spacing(2),
