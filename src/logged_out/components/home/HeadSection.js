@@ -38,6 +38,32 @@ const styles = (theme) => ({
       marginRight: theme.spacing(2),
 
     },
+    [theme.breakpoints.down("414")]: {
+      paddingTop: theme.spacing(1),
+      paddingBottom: theme.spacing(1),
+      paddingRight: theme.spacing(1),
+      paddingLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+      // marginLeft: theme.spacing(2)
+    },
+    [theme.breakpoints.down("348")]: {
+      paddingTop: theme.spacing(0),
+      paddingBottom: theme.spacing(0),
+      paddingRight: theme.spacing(0),
+      paddingLeft: theme.spacing(0),
+      marginRight: theme.spacing(0),
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2),
+
+      // marginLeft: theme.spacing(2)
+    },
+    [theme.breakpoints.between('860', '885')]: {
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(2),
+      paddingRight: theme.spacing(5),
+      paddingLeft: theme.spacing(5),
+      marginRight: theme.spacing(2),
+    },
     [theme.breakpoints.up("lg")]: {
       paddingTop: theme.spacing(2),
       paddingBottom: theme.spacing(2),

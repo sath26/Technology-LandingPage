@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import {
   AppBar,
   Toolbar,
@@ -16,6 +17,7 @@ import HowToRegIcon from "@material-ui/icons/HowToReg";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import BookIcon from "@material-ui/icons/Book";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
+import { BackgroundSyncPlugin } from "workbox-background-sync";
 
 const styles = theme => ({
   appBar: {
@@ -36,7 +38,28 @@ const styles = theme => ({
     fontSize: theme.typography.body1.fontSize,
     fontWeight: theme.typography.h6.fontWeight,
     color: "#EF7F5A",
+
   },
+  menuButtonLoginText: {
+    fontSize: theme.typography.body1.fontSize,
+    fontWeight: theme.typography.h6.fontWeight,
+    color: "#EF7F5A",
+    // border: "2px solid #EF7F5A",
+    // BackgroundColor: "#111"
+    '&[aria-label="Login"]': {
+      // color: "black",
+      outline: "1px dotted #EF7F5A !important"
+    },
+  },
+  // button: {
+  //   color: "black",
+  //   textDecoration: "none !important",
+  //   '&[aria-label="Login"]': {
+  //     color: "black",
+  //     outline: "1px dotted #EF7F5A !important"
+  //   },
+
+  // },
   brandText: {
     fontFamily: "'Teko', cursive",
     fontWeight: 400
@@ -78,7 +101,8 @@ function NavBar(props) {
     {
       name: "Login",
       onClick: openLoginDialog,
-      icon: <LockOpenIcon className="text-white" />
+      icon: <LockOpenIcon className="text-white" />,
+      iconNav: <AccountCircleOutlinedIcon />
     }
   ];
 
@@ -132,17 +156,24 @@ function NavBar(props) {
                     </Link>
                   );
                 }
-                return (
-                  <Button
-                    color="secondary"
-                    size="large"
-                    onClick={element.onClick}
-                    classes={{ text: classes.menuButtonText }}
-                    key={element.name}
-                  >
-                    {element.name}
-                  </Button>
-                );
+
+                else {
+
+                  return (
+                    <Button
+                      // variant="outlined"
+                      color="secondary"
+                      size="large"
+                      onClick={element.onClick}
+                      classes={{ text: classes.menuButtonLoginText }}
+                      key={element.name}
+                      aria-label={element.name}
+                      startIcon={element.iconNav}
+                    >
+                      {element.name}
+                    </Button>
+                  );
+                }
               })}
             </Hidden>
           </div>
