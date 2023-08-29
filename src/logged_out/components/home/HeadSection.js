@@ -1,7 +1,9 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import ParticlesBg from 'particles-bg'
+import ParticlesBg from 'particles-bg';
+// import HeaderImage from 'HeaderImage';
+import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 import {
   Grid,
   Typography,
@@ -10,14 +12,17 @@ import {
   Hidden,
   Box,
   withStyles,
-  withWidth,
-  isWidthUp,
+
+
   withTheme,
 
 } from "@material-ui/core";
+// import { withStyles, } from "@mui/material/styles"
+import { isWidthUp, withWidth, } from "@material-ui/core"
 // import { purple } from '@mui/material/colors';
 import WaveBorder from "../../../shared/components/WaveBorder";
 import ZoomImage from "../../../shared/components/ZoomImage";
+import HeaderImage from "../../../shared/components/HeaderImage";
 
 const styles = (theme) => ({
   extraLargeButtonLabel: {
@@ -224,11 +229,24 @@ function HeadSection(props) {
                   </Grid>
                   <Hidden smDown>
                     <Grid item md={6}>
+                      {/* <ZoomImage
+                        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
+                        className={classes.image}
+                        alt="header example"
+                      />
                       <ZoomImage
                         src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
                         className={classes.image}
                         alt="header example"
                       />
+                      <ZoomImage
+                        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
+                        className={classes.image}
+                        alt="header example"
+                      /> */}
+                      {/* <StyledEngineProvider injectFirst>
+                        <HeaderImage />
+                      </StyledEngineProvider> */}
                     </Grid>
                   </Hidden>
                 </Box>
