@@ -23,7 +23,7 @@ import { isWidthUp, withWidth, } from "@material-ui/core"
 import WaveBorder from "../../../shared/components/WaveBorder";
 import ZoomImage from "../../../shared/components/ZoomImage";
 import HeaderImage from "../../../shared/components/HeaderImage";
-
+import "../../../shared/components/HeaderImage.css";
 const styles = (theme) => ({
   extraLargeButtonLabel: {
     fontSize: theme.typography.body1.fontSize,
@@ -244,9 +244,9 @@ function HeadSection(props) {
                         className={classes.image}
                         alt="header example"
                       /> */}
-                      {/* <StyledEngineProvider injectFirst>
+                      <StyledEngineProvider injectFirst>
                         <HeaderImage />
-                      </StyledEngineProvider> */}
+                      </StyledEngineProvider>
                     </Grid>
                   </Hidden>
                 </Box>
