@@ -158,21 +158,23 @@ const styles = (theme) => ({
     },
 
 });
-
+const defaultVars = {
+    '--optionBackground': 'url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg)'
+}
 function HeaderImage(props) {
     const { classes, theme, width } = props;
     return (
 
-        <div className="options">
-            <div className="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-                <div className="shadow"></div>
-                <div className="label">
-                    <div className="icon">
-                        <i className="fas fa-sun"></i>
+        <div className={classes.options}>
+            <div className={classes.option} style={defaultVars}>
+                <div className={classes.shadow}></div>
+                <div className={classes.label}>
+                    <div className={classes.icon}>
+                        <i class="fas fa-sun"></i>
                     </div>
-                    <div className="info">
+                    <div className={classes.info}>
                         <div className="main">Inatethi</div>
-                        <div className="sub">Omuke trughte a otufta</div>
+                        <div className={classes.sub}>Omuke trughte a otufta</div>
                     </div>
                 </div>
             </div>
