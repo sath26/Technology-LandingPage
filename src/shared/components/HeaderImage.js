@@ -174,8 +174,32 @@ function HeaderImage(props) {
                         <i class="fas fa-sun"></i>
                     </div>
                     <div className="info">
-                        <div className="main">Inatethi</div>
-                        <div className="sub">Omuke trughte a otufta</div>
+                        {/* <div className="main">Inatethi</div> */}
+                        {/* <div className="sub">Omuke trughte a otufta</div> */}
+                    </div>
+                </div>
+            </div>
+            <div className="option" style={defaultVars}>
+                <div className="shadow"></div>
+                <div className="label">
+                    <div className="icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div className="info">
+                        {/* <div className="main">Inatethi</div> */}
+                        {/* <div className="sub">Omuke trughte a otufta</div> */}
+                    </div>
+                </div>
+            </div>
+            <div className="option" style={defaultVars}>
+                <div className="shadow"></div>
+                <div className="label">
+                    <div className="icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div className="info">
+                        {/* <div className="main">Inatethi</div> */}
+                        {/* <div className="sub">Omuke trughte a otufta</div> */}
                     </div>
                 </div>
             </div>
