@@ -228,8 +228,8 @@ function HeadSection(props) {
                     </Box>
                   </Grid>
                   <Hidden smDown>
-                    <Grid item md={6}>
-                      {/* <ZoomImage
+                    {/* <Grid item md={6} "> */}
+                    {/* <ZoomImage
                         src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
                         className={classes.image}
                         alt="header example"
@@ -244,10 +244,10 @@ function HeadSection(props) {
                         className={classes.image}
                         alt="header example"
                       /> */}
-                      <StyledEngineProvider injectFirst>
-                        <HeaderImage />
-                      </StyledEngineProvider>
-                    </Grid>
+                    <StyledEngineProvider injectFirst>
+                      <HeaderImage />
+                    </StyledEngineProvider>
+                    {/* </Grid> */}
                   </Hidden>
                 </Box>
               </div>
