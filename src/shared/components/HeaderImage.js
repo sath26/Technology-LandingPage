@@ -166,44 +166,51 @@ function HeaderImage(props) {
     const { classes, theme, width } = props;
     return (
 
-        <div className="options">
-            <div className="option" style={defaultVars}>
-                <div className="shadow"></div>
-                <div className="label">
-                    <div className="icon">
-                        <i class="fas fa-sun"></i>
+        <Box className="options">
+
+            <Grid item >
+                <Box className="option" style={defaultVars}>
+                    <div className="shadow"></div>
+                    <div className="label">
+                        <div className="icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div className="info">
+                            {/* <div className="main">Inatethi</div> */}
+                            {/* <div className="sub">Omuke trughte a otufta</div> */}
+                        </div>
                     </div>
-                    <div className="info">
-                        {/* <div className="main">Inatethi</div> */}
-                        {/* <div className="sub">Omuke trughte a otufta</div> */}
+                </Box>
+            </Grid>
+            <Grid item>
+                <Box className="option" style={defaultVars}>
+                    <div className="shadow"></div>
+                    <div className="label">
+                        <div className="icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div className="info">
+                            {/* <div className="main">Inatethi</div> */}
+                            {/* <div className="sub">Omuke trughte a otufta</div> */}
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div className="option" style={defaultVars}>
-                <div className="shadow"></div>
-                <div className="label">
-                    <div className="icon">
-                        <i class="fas fa-sun"></i>
+                </Box>
+            </Grid>
+            <Grid item>
+                <Box className="option" style={defaultVars}>
+                    <div className="shadow"></div>
+                    <div className="label">
+                        <div className="icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div className="info">
+                            {/* <div className="main">Inatethi</div> */}
+                            {/* <div className="sub">Omuke trughte a otufta</div> */}
+                        </div>
                     </div>
-                    <div className="info">
-                        {/* <div className="main">Inatethi</div> */}
-                        {/* <div className="sub">Omuke trughte a otufta</div> */}
-                    </div>
-                </div>
-            </div>
-            <div className="option" style={defaultVars}>
-                <div className="shadow"></div>
-                <div className="label">
-                    <div className="icon">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <div className="info">
-                        {/* <div className="main">Inatethi</div> */}
-                        {/* <div className="sub">Omuke trughte a otufta</div> */}
-                    </div>
-                </div>
-            </div>
-        </div>
+                </Box>
+            </Grid>
+        </Box>
     );
 }
 
