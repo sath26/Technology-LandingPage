@@ -159,22 +159,23 @@ const styles = (theme) => ({
 
 });
 const defaultVars = {
-    '--optionBackground': 'url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg)'
+    // '--optionBackground': 'url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg)'
+    '--optionBackground': `url(${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg)`
 }
 function HeaderImage(props) {
     const { classes, theme, width } = props;
     return (
 
-        <div className={classes.options}>
-            <div className={classes.option} style={defaultVars}>
-                <div className={classes.shadow}></div>
-                <div className={classes.label}>
-                    <div className={classes.icon}>
+        <div className="options">
+            <div className="option" style={defaultVars}>
+                <div className="shadow"></div>
+                <div className="label">
+                    <div className="icon">
                         <i class="fas fa-sun"></i>
                     </div>
-                    <div className={classes.info}>
+                    <div className="info">
                         <div className="main">Inatethi</div>
-                        <div className={classes.sub}>Omuke trughte a otufta</div>
+                        <div className="sub">Omuke trughte a otufta</div>
                     </div>
                 </div>
             </div>
