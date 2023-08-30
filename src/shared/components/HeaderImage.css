@@ -23,6 +23,7 @@
 
 .option:nth-child(1) {
     /* --defaultBackground:#5D9CEC; */
+
     flex-grow: 1 !important;
 
 
@@ -30,12 +31,12 @@
 
 .option:nth-child(2) {
     /* --defaultBackground:#5D9CEC; */
-    flex-grow: 1 !important;
+    /* flex-grow: 1 !important; */
 
 }
 
 .option:nth-child(3) {
     /* --defaultBackground:#5D9CEC; */
-    flex-grow: 1 !important;
+    /* flex-grow: 1 !important; */
 
 }

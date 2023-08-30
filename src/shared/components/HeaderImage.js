@@ -166,9 +166,9 @@ function HeaderImage(props) {
     const { classes, theme, width } = props;
     return (
 
-        <Box className="options">
+        <Grid display="flex" justifyContent="center" className="options">
 
-            <Grid item >
+            <Grid container alignItems="stretch" >
                 <Box className="option" style={defaultVars}>
                     <div className="shadow"></div>
                     <div className="label">
@@ -210,7 +210,7 @@ function HeaderImage(props) {
                     </div>
                 </Box>
             </Grid>
-        </Box>
+        </Grid>
     );
 }
 
