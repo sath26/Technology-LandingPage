@@ -160,7 +160,18 @@ const styles = (theme) => ({
 });
 const defaultVars = {
     // '--optionBackground': 'url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg)'
-    '--optionBackground': `url(${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg)`
+    '--optionBackground': `url(${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg)`,
+    // 'clip-path': 'inset(0 0 15% 66%)'
+}
+const clipPath = {
+    'clip-path': "inset(30% 13% 0% 0)"
+}
+const clipPath2 = {
+    'clip-path': 'inset(0 13% 20% 0%)'
+
+}
+const clipPath3 = {
+    'clip-path': 'inset(25% 20% 5% 0%)'
 }
 function HeaderImage(props) {
     const { classes, theme, width } = props;
@@ -168,7 +179,7 @@ function HeaderImage(props) {
 
         <Grid item md={6} className="options" spacing={1}>
             {/*  */}
-            <Grid item xs="3">
+            <Grid item xs="3" style={clipPath}>
                 <Box className="option" style={defaultVars}>
                     <div className="shadow"></div>
                     <div className="label">
@@ -182,7 +193,7 @@ function HeaderImage(props) {
                     </div>
                 </Box>
             </Grid>
-            <Grid item xs="3">
+            <Grid item xs="3" style={clipPath2}>
                 <Box className="option" style={defaultVars}>
                     <div className="shadow"></div>
                     <div className="label">
@@ -196,7 +207,7 @@ function HeaderImage(props) {
                     </div>
                 </Box>
             </Grid>
-            <Grid item xs="3">
+            <Grid item xs="3" style={clipPath3}>
                 <Box className="option" style={defaultVars}>
                     <div className="shadow"></div>
                     <div className="label">
