@@ -166,9 +166,9 @@ function HeaderImage(props) {
     const { classes, theme, width } = props;
     return (
 
-        <Grid item md={6} className="options" >
+        <Grid item md={6} className="options" spacing={1}>
             {/*  */}
-            <Grid item  >
+            <Grid item xs="3">
                 <Box className="option" style={defaultVars}>
                     <div className="shadow"></div>
                     <div className="label">
@@ -182,7 +182,7 @@ function HeaderImage(props) {
                     </div>
                 </Box>
             </Grid>
-            <Grid item>
+            <Grid item xs="3">
                 <Box className="option" style={defaultVars}>
                     <div className="shadow"></div>
                     <div className="label">
@@ -196,7 +196,7 @@ function HeaderImage(props) {
                     </div>
                 </Box>
             </Grid>
-            <Grid item>
+            <Grid item xs="3">
                 <Box className="option" style={defaultVars}>
                     <div className="shadow"></div>
                     <div className="label">
