@@ -14,6 +14,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { autoPlay } from 'react-swipeable-views-utils';
+import { Stack } from "@mui/material";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const styles = (theme) => ({
   blogContentWrapper: {
@@ -142,18 +143,24 @@ function Blog(props) {
           {images.map((step, index) => (
             <div key={step.label}>
               {Math.abs(activeStep - index) <= 2 ? (
-                <Box
-                  component="img"
-                  sx={{
-                    height: 255,
-                    display: 'block',
-                    maxWidth: 400,
-                    overflow: 'hidden',
-                    width: '100%',
-                  }}
-                  src={step.imgPath}
-                  alt={step.label}
-                />
+                <Stack spacing={2}>
+                  <Box
+                    component="img"
+                    display="flex"
+                    justifyContent="center"
+                    sx={{
+                      pl: 2,
+                      height: 300,
+                      display: 'block',
+                      maxWidth: 1000,
+                      overflow: 'hidden',
+
+                      width: '100',
+                    }}
+                    src={step.imgPath}
+                    alt={step.label}
+                  />
+                </Stack>
               ) : null}
             </div>
           ))}
@@ -168,7 +175,7 @@ function Blog(props) {
               onClick={handleNext}
               disabled={activeStep === maxSteps - 1}
             >
-              Next
+              {/* Next */}
               {theme.direction === 'rtl' ? (
                 <KeyboardArrowLeft />
               ) : (
@@ -183,7 +190,7 @@ function Blog(props) {
               ) : (
                 <KeyboardArrowLeft />
               )}
-              Back
+              {/* Back */}
             </Button>
           }
         />
